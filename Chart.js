@@ -2879,7 +2879,7 @@
 					point.draw();
 				});
 
-				ctx.fillStyle = 'rgba(175,40,239,1)';
+				ctx.fillStyle = 'rgba(235,84,36,0.7)';
 				ctx.textAlign = "center";
 				ctx.textBaseline = "middle";
 				ctx.fillText('Closed Issues', 300, 10);
