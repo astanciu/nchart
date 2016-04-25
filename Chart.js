@@ -820,6 +820,7 @@
 	Chart.instances = {};
 
 	Chart.Type = function(data,options,chart){
+
 		this.options = options;
 		this.chart = chart;
 		this.id = uid();
@@ -2869,13 +2870,28 @@
 					ctx.fill();
 				}
 
+
+
 				//Now draw the points over the line
 				//A little inefficient double looping, but better than the line
 				//lagging behind the point positions
 				helpers.each(pointsWithValues,function(point){
 					point.draw();
 				});
+
+				ctx.fillStyle = 'rgba(175,40,239,1)';
+				ctx.textAlign = "center";
+				ctx.textBaseline = "middle";
+				ctx.fillText('Closed Issues', 300, 10);
+				
+				ctx.fillStyle = 'rgba(34,187,238,1)';
+				ctx.textAlign = "center";
+				ctx.textBaseline = "middle";
+				ctx.fillText('Opened Issues', 500, 10);
+
 			},this);
+
+			
 		}
 	});
 
@@ -3149,7 +3165,7 @@
 			angleShowLineOut : true,
 
 			//Boolean - Whether to show labels on the scale
-			scaleShowLabels : false,
+			scaleShowLabels : true,
 
 			// Boolean - Whether the scale should begin at zero
 			scaleBeginAtZero : true,
